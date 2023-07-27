@@ -11,7 +11,6 @@ function App() {
           Home
         </button>
       </div>
-      <div className="grid ">hi</div>
     </>
   );
 }
