@@ -1,23 +1,37 @@
 import "./style/style.css";
+import { motion } from "framer-motion";
 
 function App() {
   return (
     <>
-      <div className="flex justify-center mt-3">
-        <button
-          type="button"
-          className="px-5 py-2.5 text-white text-center rounded-lg bg-gradient-to-bl from-purple-500 to-pink-400"
+      <div className="flex items-center flex-col justify-center text-9xl text-white font-bold h-screen">
+        <motion.div
+          className="w-40 h-40 bg-purple-100 rounded-xl"
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            repeatDelay: 1,
+            repeatType: "loop",
+          }}
+          animate={{ rotate: 360 }}
+        ></motion.div>
+        <motion.h1
+          initial={{
+            x: -1500,
+            opacity: 0,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+            delay: 1,
+          }}
+          className="mt-10"
         >
-          Home
-        </button>
-      </div>
-      <div className="mt-10">
-        <div className="grid relative max-w-full grid-cols-[aut">
-          <div className="bg-red-200"></div>
-          <div className="bg-red-200"></div>
-          <div className="bg-red-200"></div>
-          <div className="bg-red-200"></div>
-        </div>
+          Everything here
+        </motion.h1>
       </div>
     </>
   );
