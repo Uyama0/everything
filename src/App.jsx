@@ -1,10 +1,12 @@
-import { data } from "../src/data";
+import BlubCursor from "./components/blubCursor/BlubCursor";
 import "./style/style.css";
 
-console.log(data);
-
 function App() {
-  return <></>;
+  return (
+    <>
+      <BlubCursor />
+    </>
+  );
 }
 
 export default App;
